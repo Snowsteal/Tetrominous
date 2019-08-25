@@ -103,7 +103,7 @@ namespace FGA.TetrisAI
                         Row_Height = A+1;
                         for (int Z = A-1; Z > -1; Z--)//starts from the next block down of the row height, and go down to count the holes
                         {
-                            if (!Grid[Z][Q].enabled)//if they aint no block therr, add a hole to that bitch
+                            if (!Grid[Z][Q].enabled)//if they aint no block therr, add a hole to it
                                 Holes++;
                         }
                         break;
@@ -116,10 +116,10 @@ namespace FGA.TetrisAI
             //now for the heartache, lines completed
             int Lines_Completed = 0;
 
-            //so tha logic that we niggas use goes somethin like this shit
-            //these coords, + the grid's mothafuckin stupid ass position, will be used to see if that stupid ass fuckin line is complete
+            //so tha logic that we use goes somethin like this
+            //these coords, + the grid's position, will be used to see if that line is complete
             //do so by setting the block "there" by setting the grid positions active
-            //if so, add that motherfucker to a variable
+            //if so, add that to a variable
             bool isCompleted;
 
             for (int i = 0; i < grid.Count; i++)
